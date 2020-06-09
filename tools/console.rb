@@ -2,7 +2,7 @@ require_relative '../config/environment.rb'
 
 # create your variables and/or write any tests here
 
-# binding.pry
+
 
 
 zara = Tourist.new('zara') 
@@ -24,8 +24,11 @@ trip6 = Trip.new(zara,needle)
 trip7 = Trip.new(diego,bean)
 
 # puts Tourist.find_by_name('diego')
-puts zara.trips
+# puts monument
+# puts zara.landmarks
+print david.never_visited
 
+binding.pry
 
 
 

@@ -1,8 +1,10 @@
 # put your Trip model here
 
 class Trip
-    @@all = []
+    attr_accessor :tourist, :landmark 
 
+    @@all = []
+      
     def initialize(tourist, landmark)
         @tourist = tourist
         @landmark = landmark
@@ -13,12 +15,6 @@ class Trip
         @@all
     end
 
-    def tourist
-        Trip.all.select{|trips|trips.tourist}
-    end
-
-    def landmark
-        Trip.all.select{|trips|trips.landmark}
-    end
+   
 
 end

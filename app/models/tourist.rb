@@ -25,12 +25,14 @@ class Tourist
         trips.map{|trip|trip.landmark}
     end
 
-    def visit_landmark(landmark)
-        Trip.new(landmark)
+    def visit_landmark(landmark,city)
+        Trip.new(landmark,city)
     end
 
     def never_visited
-        Landmark.all.select{|landmarks|landmarks.tourist==!self}
+        binding.pry
+        Landmark.all.select{|landmarks|!landmarks.tourists.include?(self)}
+        
     end
 
 
